@@ -270,23 +270,33 @@ const arrayEvaluator = bigOrSmall(bigOrSmallArray);
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
-  Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
-  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
+  Write a function that is called theEliminator, which takes in two arguments, contestants 
+  (which will each be an array of strings), and loser (which will be a string).
+  The function should loop over the array of contestant names. If the loser string appears 
+  in the array, splice it out. Return the new contestants array.
 */
 
 //CODE HERE
-
-
+function theEliminator(contestants, loser) {
+    for (let i = 0; i < contestants.length; i++) {
+        if (contestants[i] === loser) {
+            contestants.splice(i, 1);
+        }   
+    }
+    return contestants;
+};
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
-  Write a function that takes in one argument, a string. The function should then console.log that string, in entirely uppercase characters.
+  Write a function that takes in one argument, a string. The function should then console.log 
+  that string, in entirely uppercase characters.
   Invoke the function, passing in the sampleString (above).
 */
 
 //CODE HERE
-
-
+function upperCaseConverter (str) {
+    console.log(str.toUpperCase());
+};
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -298,10 +308,26 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck (email) {
+    email.toString();
+    email.replace(/\s/g, "");
+    if (/@/g.test(email)) {
+        return 'Email verified';
+    } else {
+        return 'must provide a valid email address';
+    }
+};
+const newEmail = emailCheck('sjklfdasjfklasd;fjasdklfasdjkl;f');
+console.log(newEmail);
 ////////////////// PROBLEM 19 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
-  Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
+  Write a function, naming it whatever you believe to be appropriate, 
+  that buys as many chocolate frogs as possible with a certain amount of gold. 
+  Each chocolate frog costs 3 gold. Your function should take in a single parameter, 
+  which is the amount of gold you are willing to spend. Your function should return a 
+  total amount of chocolate frogs you were able to purchase.
+  Create a variable called `totalFrogs` and set it equal to your function invoked, 
+  passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
