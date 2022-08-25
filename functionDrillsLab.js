@@ -317,8 +317,6 @@ function emailCheck (email) {
         return 'must provide a valid email address';
     }
 };
-const newEmail = emailCheck('sjklfdasjfklasd;fjasdklfasdjkl;f');
-console.log(newEmail);
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, 
@@ -331,7 +329,16 @@ console.log(newEmail);
 */
 
 //CODE HERE
+function howMuchChocolate (gold) {
+    let chocolateFrog = 3;
+    let frogs = 0;
+    for (let i = gold; i > 0 && i > chocolateFrog; i -= chocolateFrog) {
+       frogs++;
+    }
+    return frogs;
+};
 
+const totalFrogs = howMuchChocolate(113);
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
