@@ -364,24 +364,24 @@ let sampleArray = [99,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-//function isArrayInOrder (arr) {
-//    const copyArr = arr;
-//    copyArr.sort();
+function isArrayInOrder (arr) {
+    const copyArr = Array.from(arr);
+    copyArr.sort();
 //    console.log(copyArr);
 //    console.log(arr);
 //    copyArr.sort(function(a, b){return a-b});
-//    const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-//    if (equals(arr, copyArr)) {
-//        return true;
-//    } else {
-//        return false;
-//    }
-//};
+    const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+    if (equals(arr, copyArr)) {
+        return true;
+    } else {
+        return false;
+    }
+};
 
-function isArrayInOrder (arr) {
+//function isArrayInOrder (arr) {
 
 let arrayIsAscending = isArrayInOrder(sampleArray);
-console.log(arrayIsAscending);
+//console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -405,13 +405,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["sailorDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["realDuck", "duck"]
